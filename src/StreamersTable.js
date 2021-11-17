@@ -24,7 +24,7 @@ class StreamersTable extends React.Component {
                                             Name
                                         </th>
                                         <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Donations collected
+                                            Collected donations
                                         </th>
                                         <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Completed donations goals
@@ -40,26 +40,27 @@ class StreamersTable extends React.Component {
 
                                         const classTr = (index % 2 === 1) ? "bg-gray-100" : "bg-white";
                                         const vodExists = streamer.vods.length !== 0 ? "" : <p>No VOD available</p>;
+                                        const donation = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(this.props.zEvent.pools[streamer.login]);
 
                                         return(
                                             <tr className={classTr}>
                                                 <td key={index} className="px-6 py-2.5 whitespace-nowrap">
                                                     <div className="flex items-center">
                                                         <div className="flex-shrink-0 h-10 w-10">
-                                                            <img className="h-10 w-10 rounded-full" src={streamer.profile_url} alt={streamer.name} />
+                                                            <img className="h-10 w-10 rounded-full cursor-pointer" src={streamer.profile_url} alt={streamer.name} />
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td className="px-6 py-4 whitespace-nowrap">
-                                                    <div className="text-sm font-bold text-gray-900">{streamer.name}</div>
+                                                    <div className="font-bold text-gray-900">{streamer.name}</div>
                                                 </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                    <div className="text-sm text-gray-900">0 €</div>
+                                                <td className="px-6 py-4 whitespace-nowrap">
+                                                    <div className="text-gray-900 font-bold">{donation}</div>
                                                 </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                    <div className="text-sm text-gray-900">10 / 10</div>
+                                                <td className="px-6 py-4 whitespace-nowrap">
+                                                    <div className="text-gray-900">10 / 10</div>
                                                 </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                <td className="px-6 py-2.5 whitespace-nowrap text-sm text-gray-500">
 
                                                     { vodExists }
 
