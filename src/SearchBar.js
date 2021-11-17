@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
 
     render() {
         return(
-            <form>
+            <form className={"mb-8"}>
                 <label className={"font-bold"}>Search</label>
                 <input type="text" placeholder="Search" className={"w-full mt-2 px-4 py-2 rounded outline-none text-gray-900"} value={this.props.search} onChange={this.handleChange}/>
             </form>

@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import SearchBar from "./SearchBar";
 import Title from "./Title";
+import StreamersTable from "./StreamersTable";
 
 class FilterableStreamersTable extends React.Component {
 
@@ -22,6 +23,7 @@ class FilterableStreamersTable extends React.Component {
             <div className={"container mx-auto p-8"}>
                 <Title />
                 <SearchBar search={this.state.search} onSearchChange={this.handleSearchChange} />
+                <StreamersTable zEvent={this.props.zEvent} />
             </div>
         );
     }
