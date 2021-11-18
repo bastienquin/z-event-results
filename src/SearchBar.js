@@ -44,8 +44,6 @@ class SearchBar extends React.Component {
                 </label>
             </form>
         );
-    }
-
-}
+    }}
 
 export default SearchBar;
