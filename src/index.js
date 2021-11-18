@@ -11,7 +11,7 @@ $(function() {
 
       $.getJSON("https://zevent.gdoc.fr/api/pool_global.json", function(data) {
       zEvent.pool = data.global;
-      $.getJSON("https://zevent.gdoc.fr/api/streamers.json", function(data) {
+      $.getJSON("https://zevent.gdoc.fr/api/donation_goals.json", function(data) {
       zEvent.streamers = data;
       $.getJSON("https://zevent.gdoc.fr/api/pools.json", function(data) {
       zEvent.pools = data;

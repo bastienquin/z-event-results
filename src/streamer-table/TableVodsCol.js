@@ -12,9 +12,9 @@ class TableVodsCol extends React.Component {
 
                 { vodExists }
 
-                {this.props.streamer.vods.map((vod) => {
+                {this.props.streamer.vods.map((vod, key) => {
                     return(
-                        <a href={vod} className={"w-12 inline-block"} title={this.props.streamer.name + " VOD"} target={"_blank"}>
+                        <a href={vod} className={"w-12 inline-block"} title={this.props.streamer.name + " VOD"} target={"_blank"} rel="noopener noreferrer" key={key}>
                             <img src={"http://image.noelshack.com/fichiers/2021/46/4/1637191390-zevent.png"}
                                  alt={"Z-Event VOD"} className={"h-10 w-10 rounded-full"} />
                         </a>

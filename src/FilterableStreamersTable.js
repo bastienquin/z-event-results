@@ -37,13 +37,15 @@ class FilterableStreamersTable extends React.Component {
     }
 
     render() {
+
         return(
             <div className={"container mx-auto p-8"}>
                 <Title />
-                <SearchBar search={this.state.search} onSearchChange={this.handleSearchChange} onOnlyVodChange={this.handleOnlyVodChange} onOnlyCompletedGoalsChange={this.handleOnlyCompletedGoalsChange} />
-                <StreamersTable zEvent={this.props.zEvent} />
+                <SearchBar results={this.props.zEvent.streamers.length} search={this.state.search} onSearchChange={this.handleSearchChange} onOnlyVodChange={this.handleOnlyVodChange} onOnlyCompletedGoalsChange={this.handleOnlyCompletedGoalsChange} />
+                <StreamersTable zEvent={this.props.zEvent} search={this.state.search} onlyVod={this.state.onlyVod} onlyCompletedGoals={this.state.onlyCompletedGoals} />
             </div>
         );
+
     }
 
 }

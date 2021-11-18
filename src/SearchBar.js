@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
         return(
             <form className={"mb-8"} onSubmit={this.handleSubmit}>
 
-                <label className={"font-bold cursor-pointer text-gray-900 dark:text-gray-100"} >Search
+                <label className={"font-bold cursor-pointer text-gray-900 dark:text-gray-100"} >Search (<span id="results">{this.props.results}</span> results)
                     <input type="text" placeholder="Search" className={"mt-2 w-full border-2 border-gray-300 bg-transparent h-10 px-4 pr-16 rounded-lg text-sm focus:outline-none text-gray-900 dark:text-gray-100"} value={this.props.search} onChange={this.handleSearchChange}/>
                 </label>
                 <label className="mt-2 block cursor-pointer">
@@ -42,6 +42,7 @@ class SearchBar extends React.Component {
                     <input type="checkbox" className="form-checkbox h-5 w-5 bg-transparent text-zevent outline-none rounded-lg cursor-pointer border-2 border-gray-300" value={this.props.onlyCompletedGoals} onChange={this.handleOnlyCompletedGoalsChange} />
                     <span className="ml-2 text-gray-500 dark:text-gray-400">Show only streamers who have reached their donation goals</span>
                 </label>
+
             </form>
         );
     }}

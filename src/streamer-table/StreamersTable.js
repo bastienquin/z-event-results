@@ -14,7 +14,7 @@ class StreamersTable extends React.Component {
                         <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <TableHeader />
-                                <TableBody zEvent={this.props.zEvent} />
+                                <TableBody zEvent={this.props.zEvent} search={this.props.search} onlyVod={this.props.onlyVod} onlyCompletedGoals={this.props.onlyCompletedGoals} />
                             </table>
                         </div>
                     </div>
