@@ -9,7 +9,6 @@ class SearchBar extends React.Component {
         this.handleOnlyVodChange = this.handleOnlyVodChange.bind(this);
         this.handleOnlyCompletedGoalsChange = this.handleOnlyCompletedGoalsChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
     }
 
     handleSearchChange(event) {
@@ -33,15 +32,15 @@ class SearchBar extends React.Component {
             <form className={"mb-8"} onSubmit={this.handleSubmit}>
 
                 <label className={"font-bold cursor-pointer text-gray-900 dark:text-gray-100"} >Search
-                <input type="text" placeholder="Search" className={"mt-2 w-full border-2 border-gray-300 bg-white h-10 px-4 pr-16 rounded-lg text-sm focus:outline-none text-gray-900"} value={this.props.search} onChange={this.handleSearchChange}/>
+                    <input type="text" placeholder="Search" className={"mt-2 w-full border-2 border-gray-300 bg-transparent h-10 px-4 pr-16 rounded-lg text-sm focus:outline-none text-gray-900 dark:text-gray-100"} value={this.props.search} onChange={this.handleSearchChange}/>
                 </label>
                 <label className="mt-2 block cursor-pointer">
-                    <input type="checkbox" className="form-checkbox h-5 w-5 text-zevent outline-none rounded-lg cursor-pointer border-gray-400" value={this.props.onlyVod} onChange={this.handleOnlyVodChange} />
-                    <span className="ml-2 text-gray-400">Show only streamers with available VODs</span>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 bg-transparent text-zevent outline-none rounded-lg cursor-pointer border-2 border-gray-300 " value={this.props.onlyVod} onChange={this.handleOnlyVodChange} />
+                    <span className="ml-2 text-gray-500 dark:text-gray-400">Show only streamers with available VODs</span>
                 </label>
                 <label className="mt-2 block cursor-pointer">
-                    <input type="checkbox" className="form-checkbox h-5 w-5 text-zevent outline-none rounded-lg cursor-pointer border-gray-400" value={this.props.onlyCompletedGoals} onChange={this.handleOnlyCompletedGoalsChange} />
-                    <span className="ml-2 text-gray-400">Show only streamers who have reached their donation goals</span>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 bg-transparent text-zevent outline-none rounded-lg cursor-pointer border-2 border-gray-300" value={this.props.onlyCompletedGoals} onChange={this.handleOnlyCompletedGoalsChange} />
+                    <span className="ml-2 text-gray-500 dark:text-gray-400">Show only streamers who have reached their donation goals</span>
                 </label>
             </form>
         );
