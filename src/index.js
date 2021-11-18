@@ -23,6 +23,11 @@ $(function() {
                 document.getElementById('root')
             );
 
+            $("#toggleDarkMode").on('click', function() {
+                  $("html").toggleClass('dark');
+                  $("#iconDarkMode").toggleClass("fa-sun fa-moon");
+            });
+
       });
       });
       });
