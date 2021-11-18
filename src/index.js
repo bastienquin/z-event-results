@@ -27,8 +27,4 @@ $(function() {
       });
       });
 
-      // "https://zevent.gdoc.fr/api/streamers.json"
-      // "https://zevent.gdoc.fr/api/pools.json"
-      // "https://zevent.gdoc.fr/api/pool_global.json"
-
 });

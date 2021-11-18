@@ -6,7 +6,7 @@ class TableHeader extends React.Component {
 
     render() {
         return(
-            <thead className="bg-gray-50">
+            <thead className="bg-gray-50 dark:bg-gray-900">
                 <tr>
                     <TableHeaderCol>Avatar</TableHeaderCol>
                     <TableHeaderCol>Name</TableHeaderCol>
