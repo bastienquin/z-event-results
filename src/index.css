@@ -17,6 +17,9 @@ code {
     monospace;
 }
 
+.text-zevent {
+    color: #56ae32;
+}
 
 [type='checkbox']:focus, [type='radio']:focus {
   outline: 2px solid transparent;
@@ -30,5 +33,5 @@ code {
   outline: 2px solid transparent;
   outline-offset: 2px;
   --tw-ring-color: --tw-color-gray-600;
-  border-color: #059669;
+  border-color: #56ae32;
 }
