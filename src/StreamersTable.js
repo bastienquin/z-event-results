@@ -30,12 +30,16 @@ class StreamersTable extends React.Component {
                                                 <td key={index} className="px-6 py-2.5 whitespace-nowrap">
                                                     <div className="flex items-center">
                                                         <div className="flex-shrink-0 h-10 w-10">
-                                                            <img className="h-10 w-10 rounded-full cursor-pointer" src={streamer.profile_url} alt={streamer.name} />
+                                                            <a href={"https://twitch.tv/" + streamer.login} target={"_blank"} className={"hover:underline"}>
+                                                                <img className="h-10 w-10 rounded-full cursor-pointer" src={streamer.profile_url} alt={streamer.name} />
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td className="px-6 py-4 whitespace-nowrap">
-                                                    <div className="font-bold text-gray-900">{streamer.name}</div>
+                                                    <div className="font-bold text-gray-900">
+                                                        <a href={"https://twitch.tv/" + streamer.login} target={"_blank"} className={"hover:underline"}>{streamer.name}</a>
+                                                    </div>
                                                 </td>
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     <div className="text-gray-900 font-bold">{donation}</div>
