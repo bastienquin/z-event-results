@@ -32,6 +32,9 @@ class StreamersTable extends React.Component {
                                         <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Available VOD
                                         </th>
+                                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Twitch Channel
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
@@ -66,12 +69,18 @@ class StreamersTable extends React.Component {
 
                                                     {streamer.vods.map((vod) => {
                                                         return(
-                                                            <a href={vod} className={"w-12 inline-block"} title={streamer.name + " VOD"}>
+                                                            <a href={vod} className={"w-12 inline-block"} title={streamer.name + " VOD"} target={"_blank"}>
                                                             <img src={"http://image.noelshack.com/fichiers/2021/46/4/1637191390-zevent.png"}
                                                                  alt={"Z-Event VOD"} className={"h-10 w-10 rounded-full"} />
                                                             </a>
                                                         );
                                                     })}
+                                                </td>
+                                                <td className="px-6 py-2.5 whitespace-nowrap text-sm">
+                                                    <a href={"https://twitch.tv/" + streamer.login} target={"_blank"} className={"text-purple-500 hover:underline"}>
+                                                        <img className={"mr-2 w-5 float-left"} src={"https://upload.wikimedia.org/wikipedia/commons/d/d3/Twitch_Glitch_Logo_Purple.svg"} alt={"Twitch logo"} />
+                                                        {streamer.name}
+                                                    </a>
                                                 </td>
                                             </tr>
                                         );
