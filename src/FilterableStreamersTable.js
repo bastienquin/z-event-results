@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import SearchBar from "./SearchBar";
 import Title from "./Title";
-import StreamersTable from "./StreamersTable";
+import StreamersTable from "./streamer-table/StreamersTable";
 
 class FilterableStreamersTable extends React.Component {
 
