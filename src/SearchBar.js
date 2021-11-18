@@ -31,11 +31,11 @@ class SearchBar extends React.Component {
                 </label>
                 <label className="mt-2 block cursor-pointer">
                     <input type="checkbox" className="form-checkbox h-5 w-5 text-zevent outline-none rounded-lg" value={this.props.onlyVod} onChange={this.handleOnlyVodChange} />
-                    <span className="ml-2 text-white">Only show streamers with available VODs</span>
+                    <span className="ml-2 text-white">Show only streamers with available VODs</span>
                 </label>
                 <label className="mt-2 block cursor-pointer">
                     <input type="checkbox" className="form-checkbox h-5 w-5 text-zevent outline-none rounded-lg" value={this.props.onlyCompletedGoals} onChange={this.handleOnlyCompletedGoalsChange} />
-                    <span className="ml-2 text-white">Only show streamers that have completed their donations goals</span>
+                    <span className="ml-2 text-white">Show only streamers who have reached their donation goals</span>
                 </label>
             </form>
         );
