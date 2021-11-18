@@ -66,7 +66,7 @@ class StreamersTable extends React.Component {
 
                                                     {streamer.vods.map((vod) => {
                                                         return(
-                                                            <a href={vod} className={"w-12 inline-block"} title={streamer.name + "VOD"}>
+                                                            <a href={vod} className={"w-12 inline-block"} title={streamer.name + " VOD"}>
                                                             <img src={"http://image.noelshack.com/fichiers/2021/46/4/1637191390-zevent.png"}
                                                                  alt={"Z-Event VOD"} className={"h-10 w-10 rounded-full"} />
                                                             </a>
