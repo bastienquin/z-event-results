@@ -5,6 +5,10 @@ import $ from "jquery";
 
 import FilterableStreamersTable from './FilterableStreamersTable.js'
 
+if (localStorage.getItem('darkMode') === null) {
+      localStorage.setItem('darkMode', 'true');
+}
+
 $(function() {
 
       let zEvent = {};
@@ -24,9 +28,14 @@ $(function() {
             );
 
             $("#toggleDarkMode").on('click', function() {
-                  $("html").toggleClass('dark');
+                  const html = $("html");
+                  html.toggleClass('dark');
                   $("#iconDarkMode").toggleClass("fa-sun fa-moon");
+                  localStorage.setItem('darkMode', html.hasClass('dark'));
+                  console.log(localStorage.getItem('darkMode'));
             });
+
+            if (JSON.parse(localStorage.getItem('darkMode')) === true) $("html").addClass('dark');
 
       });
       });
