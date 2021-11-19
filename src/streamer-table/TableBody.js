@@ -18,7 +18,7 @@ class TableBody extends React.Component {
 
             if (this.props.onlyVod && streamer.vods.length === 0) return;
             if (this.props.onlyCompletedGoals && done !== streamer.donation_goals.length) return;
-            const donation = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(this.props.zEvent.pools[streamer.twitch_metadata.login]);
+            const donation = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, minimumFractionDigits: 0 }).format(this.props.zEvent.pools[streamer.twitch_metadata.login]);
 
             rows.push(<TableRow key={key} streamer={streamer} index={index} donation={donation} />);
 
